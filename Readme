@@ -1,0 +1,5 @@
+Steps to run the project:
+1. Open your command prompt or terminal.
+2. Navigate to the directory where you have downloaded the project
+3. use this command to start a python server: python -m http.server 7004
+4. oen web browser and paste the link: http://localhost:7004/index.html
