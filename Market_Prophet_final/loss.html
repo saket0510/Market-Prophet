@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Market Prophet" />
+    <meta property="og:image" content="./assets/metass.png" />
+    <meta property="og:description" content="Predicting S&P Stock Market Trends with Machine Learning: An
+Interactive Visual Analysis using d3" />
+    <meta property="og:url" content="" />
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="./dist/main.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+    </style>
+    <link rel="icon" type="image/png" href="./assets/image.png">
+    <title>Market Prophet</title>
+</head>
+
+
+<body>
+    <div class="nav_bar">
+        <div class="nav-bar-right">
+            <img src="assets/image.png" class="nav-logo" height=60px width="55px"> 
+            <div id="title"> Market Prophet </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Graphs</button>
+            <div class="dropdown-content">
+                <a href="index.html" target="_self">Stock values</a>
+                <a href="loss.html"target="_self">Loss graphs</a>
+               
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="visual-container2">
+        <div class="icon-container2">
+            <img src="https://cdn.freebiesupply.com/images/thumbs/2x/apple-logo.png" onclick=" makeSecondChart('AAPL');" class="logo">
+            <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" onclick="makeSecondChart('GOOG')" class="logo">
+            <img src="https://www.freepnglogos.com/uploads/microsoft-window-logo-emblem-0.png" onclick="makeSecondChart('MSFT')" class="logo">
+            <img src="https://www.logo.wine/a/logo/Amazon_(company)/Amazon_(company)-Logo.wine.svg" onclick="makeSecondChart('AMZN')" class="logo">
+
+        </div>
+
+        <script src="src/scripts/graph.js"></script>
+        <script src="src/scripts/closeWelcome.js"></script>
+
+        <div id="container2">
+            <img src="assets/image.png" id="centerimg">
+
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="openWelcomeBox()" class="help-button"> ? </button>
+    </div>
+</body>
+
+</html>

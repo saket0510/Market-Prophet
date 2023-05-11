@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Market Prophet" />
+    <meta property="og:image" content="./assets/metass.png" />
+    <meta property="og:description" content="Predicting S&P Stock Market Trends with Machine Learning: An
+Interactive Visual Analysis using d3" />
+    <meta property="og:url" content="" />
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="./dist/main.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+    </style>
+    <link rel="icon" type="image/png" href="./assets/image.png">
+    <title>Market Prophet</title>
+</head>
+
+<body>
+    <div class="nav_bar">
+        <div class="nav-bar-right">
+            <img src="assets/image.png" class="nav-logo" height=60px width="55px"> 
+            <div id="title"> Market Prophet </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Graphs</button>
+            <div class="dropdown-content">
+                <a href="index.html" target="_self">Stock values</a>
+                <a href="loss.html"target="_self">Loss graphs</a>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="tinterModal" id="tint" onClick="closeWelcomeBox()">
+        <div class="welcomeBox">
+            <div class="welcomeBoxText"> 
+                <h1> Welcome to Market Prophet </h1>
+                <p> Market Prophet is an interactive visual analysis tool utilizing machine learning to predict S&P stock market trends. Leveraging the power of D3.js for data visualization, we aim to provide a seamless and intuitive experience for users to interpret complex stock market data.</p>
+                <p> To get started, select a stock by clicking any of the icons on the left. The graph will display the stock's historical performance as well as our machine learning model's future predictions. </p>
+                <p> Use your cursor to hover over specific data points on the graph for more detailed information. Each company logo will load the respective company's stock performance over the year. </p>
+                <p> <b>Click anywhere to start interacting!</b></p>
+                <p> The stock data was acquired using yfinance in python</p>
+                <p> Disclaimer: Please note that the predictions provided by Market Prophet are for informational purposes only. They should not be considered financial advice.</p>
+            </div class="welcomeBoxText">
+        </div>
+    </div>
+
+    <div class="visual-container">
+        <div class="icon-container">
+            
+            <img src="assets/a_lstm.jpeg" onclick="makeChart('AAPL_LSTM')" class="logo">
+            <img src="assets/a_gru.jpeg" onclick="makeChart('AAPL_GRU')" class="logo">
+            <img src="assets/a_cnn.jpeg" onclick="makeChart('AAPL_CNN')" class="logo">
+            <img src="assets/g_lstm.jpeg" onclick="makeChart('GOOGLE_LSTM')" class="logo">
+            <img src="assets/g_gru.jpeg" onclick="makeChart('GOOGLE_GRU')" class="logo">
+            <img src="assets/g_cnn.jpeg" onclick="makeChart('GOOGLE_CNN')" class="logo">
+            <img src="assets/m_lstm.jpeg" onclick="makeChart('MICROSOFT_LSTM')" class="logo">
+            <img src="assets/m_gru.jpeg" onclick="makeChart('MICROSOFT_GRU')" class="logo">
+            <img src="assets/m_cnn.jpeg" onclick="makeChart('MICROSOFT_CNN')" class="logo">
+            <img src="assets/az_lstm.jpeg" onclick="makeChart('AMAZON_LSTM')" class="logo">
+            <img src="assets/az_gru.jpeg" onclick="makeChart('AMAZON_GRU')" class="logo">
+            <img src="assets/az_cnn.jpeg" onclick="makeChart('AMAZON_CNN')" class="logo">
+        </div>
+
+        <script src="src/scripts/graph.js"></script>
+        <script src="src/scripts/closeWelcome.js"></script>
+
+        <div id="container">
+            <img src="assets/image.png" id="centerimg">
+
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="openWelcomeBox()" class="help-button"> ? </button>
+    </div>
+</body>
+
+</html>
